@@ -1,0 +1,40 @@
+void setup() {
+  background(#f09a23);
+  fullScreen();
+  noCursor();
+}
+void draw() {
+  //background(0);
+
+  push();
+  translate(random(map(mouseX, 0, width, 0, width/2)), (random(map(mouseY, 0, height, 0, height/2)))); 
+  scale(map(mouseX, 0, width, 0, 2));
+  stroke(#faab1a);
+  strokeWeight(3);
+  fill(#bf2406);
+  triangle(100, 600, 300, 250, 500, 600);
+  pop();
+
+  push();
+  translate(width/3, height/3);
+  rotate(radians(map(mouseY, 0, height, 0, 180))); 
+
+  rectMode(CENTER);
+  stroke(#d15f17);
+  strokeWeight(3);
+  fill(#c8460e);
+  rect(0, 0, 300, 300); 
+  pop();
+
+  push();
+  translate(950, 250);
+  rotate(radians(map(mouseX, 0, width, 0, 180)));
+  scale(random(0.5,1));
+
+  rectMode(CENTER);
+  stroke(#e58623);
+  strokeWeight(3);
+  fill(#da711d);
+  rect(0, 0, 50, 500);
+  pop();
+}
